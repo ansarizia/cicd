@@ -1,14 +1,6 @@
 pipeline {
     agent any
-    properties([
-        parameters([
-            choice(name: 'BRANCH_NAME',choices: ['master','feature'], description:'Name of branch'),
-            string(
-                defaultValue: 'feature',
-                name: 'branchName'
-            )
-        ])
-    ])
+    
     stages {
         stage('Clone Repo') {
             steps {
