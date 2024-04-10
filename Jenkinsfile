@@ -8,7 +8,7 @@ pipeline {
                 echo "Branch Name"
                 echo params.BRANCH_NAME
                 println "Branch" + params.BRANCH_NAME
-                git branch: "main" , url: "https://github.com/ansarizia/pipelines-vote-ui.git"
+                git branch: params.BRANCH_NAME , url: "https://github.com/ansarizia/pipelines-vote-ui.git"
             }
         }
         
